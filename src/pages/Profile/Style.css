@@ -1,0 +1,39 @@
+.posts{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap:150px
+}
+
+.post{
+    display: flex;
+    gap:100px
+}
+
+.post:nth-child(2n){
+    flex-direction: row-reverse;
+}
+
+.img{
+    flex:2;
+    position: relative;
+}
+
+.img::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: lightskyblue;
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    z-index: -1;
+}
+
+img{
+    width: 100%;
+}
+
+.content{
+    flex:3
+}

@@ -1,0 +1,42 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: lightskyblue;
+}
+
+form{
+    display: flex;
+    flex-direction:column ;
+    padding: 10px;
+    background: white;
+    width: 200px;
+    gap: 20px;
+}
+
+.h1{
+    color: rgb(16, 179, 179);
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.input{
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid lightgrey;
+}
+
+.signup-btn{
+    padding: 10px;
+    border: none;
+    background: rgb(16, 179, 179);
+    cursor: pointer;
+}
+
+.p-text{
+    font-size:12px;
+    text-align: center;
+    color: red;
+}
