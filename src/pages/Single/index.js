@@ -45,12 +45,7 @@ const Single = () => {
       console.log(err)
     }
   }
-
-  const getText = (html) =>{
-    const doc = new DOMParser().parseFromString(html, "text/html")
-    return doc.body.textContent
-  }
-
+  
   return (<>
     {isReturn ? ( 
       <div className='single'>
