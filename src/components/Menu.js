@@ -9,7 +9,7 @@ function Menu({gallery}) {
   useEffect(() => {
     const fetchData = async()=>{
       try{
-        const res = await axios.get(`http://localhost:3001/api/post/?gallery=${gallery}`)
+        const res = await axios.get(`https://picrsus.herokuapp.com/api/post/?gallery=${gallery}`)
         setPosts(res.data)
       }catch(err){
         console.log(err)

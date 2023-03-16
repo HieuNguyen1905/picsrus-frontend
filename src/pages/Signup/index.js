@@ -8,6 +8,7 @@ export default function Signup() {
     username: "",
     email: "",
     password: "",
+    img:""
   })
 
   const [err, setErr] = useState(null)
@@ -40,6 +41,7 @@ export default function Signup() {
         <input className='input' type="text" placeholder='username' name='username' onChange={handleChange} />
         <input className='input' type="text" placeholder='example@gmail.com' name='email' onChange={handleChange} />
         <input className='input' type="password" placeholder='Password' name='password' onChange={handleChange} />
+        <input className='input' type="text" placeholder='(Optional) Avatar Img URL' name='img' onChange={handleChange} />
         <button className='signup-btn'>Sign Up</button>
         {err && <p className='p-text'>{err}</p>}
         <span>

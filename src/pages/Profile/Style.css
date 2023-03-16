@@ -1,29 +1,29 @@
-.posts{
+.posts1{
     margin-top: 50px;
     display: flex;
     flex-direction: column;
     gap:150px
 }
 
-.post{
+.post1{
     display: flex;
     gap:100px
 }
 
-.post:nth-child(2n){
+.post1:nth-child(2n){
     flex-direction: row-reverse;
 }
 
-.img{
+.img1{
     flex:2;
     position: relative;
 }
 
-.img::after{
+.img1::after{
     content: "";
     width: 100%;
     height: 100%;
-    background-color: lightskyblue;
+    background-color: rgb(255, 107, 107);
     position: absolute;
     top: 20px;
     left: -20px;
@@ -34,6 +34,19 @@ img{
     width: 100%;
 }
 
-.content{
+.content1{
     flex:3
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }

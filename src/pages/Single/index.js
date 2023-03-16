@@ -18,7 +18,7 @@ const Single = () => {
   useEffect(() => {
     const fetchData = async()=>{
       try{
-        const res = await axios.get(`http://localhost:3001/api/post/${postId}`)
+        const res = await axios.get(`https://picrsus.herokuapp.com/api/post/${postId}`)
         setPost(res.data)
         setIsReturn(true)
       }catch(err){
@@ -32,7 +32,7 @@ const Single = () => {
     try{
       const savedToken = JSON.parse(localStorage.getItem("user")).token
       console.log(savedToken)
-      await axios.delete(`http://localhost:3001/api/post/${postId}`
+      await axios.delete(`https://picrsus.herokuapp.com/api/post/${postId}`
       ,{
         headers: {
           Authorization:`Bearer ${savedToken}`
@@ -40,7 +40,7 @@ const Single = () => {
     }
     )
       
-      navigate("/?gallery=art")
+      navigate("/")
     }catch(err){
       console.log(err)
     }

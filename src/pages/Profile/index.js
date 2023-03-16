@@ -7,14 +7,16 @@ import { AuthContext } from '../../context/authContext'
 export default function Profile() {
     const [posts, setPosts] = useState([])
     const [displayName, setDisplayName] = useState("")
+    const [displayImg, setDisplayImg] = useState("")
     const location = useLocation();
     const userId = location.pathname.split('/')[2]
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get(`http://localhost:3001/api/user/${userId}`)
+                const res = await axios.get(`https://picrsus.herokuapp.com/api/user/${userId}`)
                 setPosts(res.data.Posts)
                 setDisplayName(res.data.username)
+                setDisplayImg(res.data.img)
                 console.log(posts)
             } catch (err) {
                 console.log(err)
@@ -33,15 +35,18 @@ export default function Profile() {
 
     return (
         <div className='home'>
+            <div className='profile'>
+            {displayImg && <img className='avatar' alt='' src={displayImg}/>}
             <h1>{displayName}</h1>
             <h3>Pictures: {posts.length}</h3>
-            <div className='posts'>
+            </div>
+            <div className='posts1'>
                 {posts.map((post) => (
-                    <div className='post' key={post.id}>
-                        <div className='img'>
+                    <div className='post1' key={post.id}>
+                        <div className='img1'>
                             <img alt='' src={post.img} />
                         </div>
-                        <div className='content'>
+                        <div className='content1'>
                             {currentUser ? <Link className='link' to={`/post/${post.id}`}>
                                 <h2>{post.title}</h2>
                             </Link> : <h2 className='link'>{post.title}</h2>}

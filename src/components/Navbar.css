@@ -13,13 +13,13 @@
 
 .link{
     text-decoration: none;
-    color: black;
+    color: rgb(255, 107, 107);
     font-size: 25px;
 }
 
 .link-active{
     text-decoration: none;
-    color: lightblue;
+    color: rgb(26, 83, 92);
     font-size: 25px;
 }
 
@@ -35,7 +35,7 @@
 }
 
 .post-btn{
-    background-color: lightskyblue;
+    background-color: rgb(244, 191, 245);
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -47,6 +47,10 @@
 
 .post-btn:hover{
     color: rgb(2, 45, 59);
-    background-color: rgb(68, 88, 235);
+    background-color: rgb(26, 83, 92);
     border: 1px soild black;
+}
+
+.navbar{
+    background: rgb(255, 230, 109);
 }

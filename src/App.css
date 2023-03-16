@@ -1,11 +1,13 @@
 .app{
     display: flex;
     justify-content: center;
-    /* background-color: rgb(175, 233, 229); */
-    /* background-image:url(Picture/background2.jpg); */
+    background: rgb(175, 233, 229);
+    /* background-color: rgb(255, 107, 107); */
+    /* background-image:url(Picture/background.png); */
 }
 
 .container{
     width: 1024px;
-    
+    background: rgb(247, 255, 247);
+    z-index: 0;
 }

@@ -23,7 +23,7 @@ export default function Login () {
     e.preventDefault()
     try {
       await login(input)
-      navigate("/?gallery=art")
+      navigate("/")
     } catch (err) {
       setErr(err.response.data)
     }

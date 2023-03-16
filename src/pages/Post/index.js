@@ -31,7 +31,7 @@ export default function Post () {
     try{
       const savedToken = JSON.parse(localStorage.getItem("user")).token
       console.log(savedToken)
-      state ? await axios.put(`http://localhost:3001/api/post/${state.id}`,{
+      state ? await axios.put(`https://picrsus.herokuapp.com/api/post/${state.id}`,{
         title,
         description:value,
         // img:file? imgUrl:""
@@ -40,7 +40,7 @@ export default function Post () {
         headers: {
           Authorization:`Bearer ${savedToken}`
         }
-      }) : await axios.post(`http://localhost:3001/api/post/`,{
+      }) : await axios.post(`https://picrsus.herokuapp.com/api/post/`,{
         title,
         description:value,
         // img:file? imgUrl:"",

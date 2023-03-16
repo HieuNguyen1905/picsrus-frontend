@@ -7,7 +7,7 @@
 
 .menu-tab h1{
     font-size: 20px;
-    color:lightblue;
+    color:rgb(175, 233, 229);
 }
 
 menu-tab-post{
@@ -23,15 +23,15 @@ menu-tab-post img{
 
 .menu-btn{
     width: max-content;
-    color: lightskyblue;
+    color: rgb(2, 45, 59);
     border: none;
     padding: 7.5px 15px;
     cursor: pointer;
-    background: white;
+    background: rgb(255, 230, 109);
     border: 1px solid lightblue;
 }
 
 .menu-btn:hover{
     color:white;
-    background: black
+    background: rgb(255, 107, 107)
 }

@@ -14,7 +14,7 @@ export default function Home () {
         if(!gallery){
           return navigate("/?gallery=technology")
         }
-        const res = await axios.get(`http://localhost:3001/api/post${gallery}`)
+        const res = await axios.get(`https://picrsus.herokuapp.com/api/post${gallery}`)
         setPosts(res.data)
       }catch(err){
         console.log(err)
