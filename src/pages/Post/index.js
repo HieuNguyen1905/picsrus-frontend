@@ -10,31 +10,28 @@ export default function Post () {
   const state = useLocation().state
   const [value,setValue] = useState(state?.description || "")
   const [title, setTitle] = useState(state?.title || "")
-  // const [file, setFile] = useState(null)
   const [img, setImg] = useState(state?.img || "")
   const [gallery, setGallery] = useState(state?.gallery || "")
   const navigate = useNavigate();
-  // const upload = async () =>{
-  //   try{
-  //     const formData = new FormData()
-  //     formData.append("file", file)
-  //     const res = await axios.post("http://localhost:3001/api/upload", formData)
-  //     return res.data
-  //   }catch(err){
-  //     console.log(err)
-  //   }
-  // }
+  const [error, setError] = useState("")
 
   const handleSubmit = async (e)=>{
     e.preventDefault()
-    // const imgUrl = upload()
+    if(title === ""){
+      return setError("Title can not be empty ❌")
+    }else if(value === ""){
+      return setError("Description can not be empty ❌")
+    }else if(img === ""){
+      return setError("Img URL can not be empty ❌")
+    }else if(gallery === ""){
+      return setError("Please choose the gallery of this photo ❌")
+    }
     try{
       const savedToken = JSON.parse(localStorage.getItem("user")).token
       console.log(savedToken)
       state ? await axios.put(`https://picrsus.herokuapp.com/api/post/${state.id}`,{
         title,
         description:value,
-        // img:file? imgUrl:""
         img,
         gallery},{
         headers: {
@@ -43,7 +40,6 @@ export default function Post () {
       }) : await axios.post(`https://picrsus.herokuapp.com/api/post/`,{
         title,
         description:value,
-        // img:file? imgUrl:"",
         img,
         gallery},{
         headers: {
@@ -65,6 +61,7 @@ export default function Post () {
         
         </div>
         <div><input className='input-url' value={img} placeholder='Image URL' onChange={e=>setImg(e.target.value)}/></div>
+        {error && <h4 className='mess'>{error}</h4>}
       </div>
       <div className='items'>
         <div className='item-content'>
@@ -75,13 +72,11 @@ export default function Post () {
           <span>
             <b>Privacy:</b> Public
           </span>
-          <input style={{display:"none"}} type="file" id='file' 
-          // onChange={e=>setFile(e.target.files[0])}
-          />
-          <label htmlFor="file">Upload Image</label>
+          <span>
+            <b>Drop a URL link to your image</b>
+          </span>
           <br/>
           <div className='buttons'>
-          <button>Save draft</button>
           <button onClick={handleSubmit}>Publish</button>
           </div>
         </div>

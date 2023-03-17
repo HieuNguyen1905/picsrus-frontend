@@ -22,16 +22,22 @@ menu-tab-post img{
 }
 
 .menu-btn{
-    width: max-content;
-    color: rgb(2, 45, 59);
-    border: none;
-    padding: 7.5px 15px;
+    background: rgb(255, 107, 107);
     cursor: pointer;
-    background: rgb(255, 230, 109);
-    border: 1px solid lightblue;
+    border: 1px solid teal;
+    padding: 10px 12px;
+    border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  min-height: 30px;
+  outline: 0;
 }
 
 .menu-btn:hover{
     color:white;
-    background: rgb(255, 107, 107)
+    background: rgb(255, 230, 109)
 }

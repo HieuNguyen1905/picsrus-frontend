@@ -69,14 +69,32 @@ label{
 
 .buttons button{
     cursor: pointer;
-    background: lightskyblue;
-    border: 1px solid teal;
-    padding: 3px 5px;
+    background: rgb(255, 107, 107);
+    border: 1px solid rgb(233, 52, 52);
+    padding: 12px 14px;
+    border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
 }
 
 .cat{
     display: flex;
     align-items: center;
     gap: 2px;
-    color:steelblue
+    color:rgb(255, 107, 107)
+}
+
+.mess{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #9F6000;
+	background-color: #FEEFB3;
+    padding: 20px;
 }
